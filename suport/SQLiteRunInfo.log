@@ -1,0 +1,56 @@
+<module>(24)[DEBUG]2018-11-04 11:17:21
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(103)[DEBUG]开始创建表：test_user
+table_create(113)[DEBUG]create table test_user (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(116)[DEBUG]Table created done
+table_create(119)[DEBUG]Create table successfully !
+value_insert(199)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(203)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-04 11:53:22
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(104)[DEBUG]开始创建表：test_user
+value_insert(200)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-04 11:53:28
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(104)[DEBUG]开始创建表：test_user
+value_insert(200)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-04 11:54:41
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(104)[DEBUG]开始创建表：test_user
+value_insert(200)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+column_add(141)[DEBUG]Table is NOT exist: test text
+value_insert(200)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-04 11:55:41
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(104)[DEBUG]开始创建表：test_user
+value_insert(200)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+column_add(141)[DEBUG]Table is NOT exist: test text
+value_insert(194)[DEBUG]Table is NOT exist: help
+<module>(24)[DEBUG]2018-11-04 12:03:36
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test.db
+table_create(104)[DEBUG]开始创建表：test_user
+value_insert(205)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+column_add(141)[DEBUG]Table is NOT exist: test text
+value_insert(197)[INFO]HELP:
+.value_insert(table_name,columns,values)
+.value_insert('test_name',"('name','age')","('Tom',20),('Kite',21)"
+value_insert(199)[DEBUG]Table is NOT exist: help
+<module>(24)[DEBUG]2018-11-04 12:39:54
+模块或函数名(行号)[日志类型]日志信息: 
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(105)[DEBUG]开始创建表：test0001
+table_create(115)[DEBUG]create table test0001 (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(118)[DEBUG]Table created done
+table_create(121)[DEBUG]Create table successfully !
