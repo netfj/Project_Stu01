@@ -23,6 +23,15 @@ class SinClass(QObject):
         self.sin1.connect(self.sin1Call)
         self.sin1.connect(self.sin2Call)
         self.sin2.connect(self.sin1)
+    def disconnect_a(self):
+        self.sin1.disconnect(self.sin1Call)
+        self.sin1.disconnect(self.sin2Call)
+        self.sin2.disconnect(self.sin1)
+
+    def b_sin12_to_Call1(self):
+        self.sin1.connect(self.sin1Call)
+        self.sin2.connect(self.sin1Call)
+
 
     def a_emit(self):
         self.sin1.emit()
@@ -32,4 +41,6 @@ sin = SinClass()
 sin.a_sin1_to_Call12_and_sin2_to_sin1Call()
 sin.a_emit()
 
-
+sin.disconnect_a()
+sin.b_sin12_to_Call1()
+sin.a_emit()

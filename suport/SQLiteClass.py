@@ -21,7 +21,7 @@ logging.basicConfig(filename='SQLiteRunInfo.log',
                     level=logging.DEBUG,
                     format="%(funcName)s(%(lineno)d)[%(levelname)s]%(message)s")
 logging.debug(time.strftime("%Y-%m-%d %H:%M:%S",
-                            time.localtime())+'\n模块或函数名(行号)[日志类型]日志信息: ')
+                            time.localtime())+'\n模块或函数名(行号)[日志类型]日志信息')
 
 class DBT:
     '''

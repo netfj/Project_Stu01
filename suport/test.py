@@ -8,5 +8,3 @@ from SQLiteClass import *
 dbt = DBT('test01.db')
 dbt.table_create('test0001')
 
-import
-
