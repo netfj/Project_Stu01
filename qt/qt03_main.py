@@ -1,7 +1,7 @@
 #coding:utf-8
 """
 @info: 调用窗口，直接调用
-@author:NetFj @software:PyCharm @file:main.py @time:2018/11/4.18:34
+@author:NetFj @software:PyCharm @file:qt03_main.py @time:2018/11/4.18:34
 """
 from PyQt5 import QtCore, QtGui, QtWidgets
 
