@@ -1,9 +1,70 @@
-<module>(24)[DEBUG]2018-11-07 20:24:29
-模块或函数名(行号)[日志类型]日志信息<module>(24)[DEBUG]2018-11-07 20:25:37
+
+<module>(24)[DEBUG]2018-11-07 23:59:01
 模块或函数名(行号)[日志类型]日志信息
 __init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(105)[DEBUG]开始创建表：test0001
-<module>(24)[DEBUG]2018-11-07 21:10:37
+value_insert(200)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(204)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:05:17
 模块或函数名(行号)[日志类型]日志信息
 __init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(105)[DEBUG]开始创建表：test0001
+value_insert(202)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(206)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:05:54
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(106)[DEBUG]表已经存在:test0001
+value_insert(202)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(206)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:10:40
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:14:42
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+table_create(117)[DEBUG]create table t1 (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(120)[DEBUG]Table created done：create table t1 (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(125)[DEBUG]Create table successfully !
+value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:15:26
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+table_create(107)[DEBUG]表已经存在:t1
+value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:15:48
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+table_create(107)[DEBUG]表已经存在:t1
+value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:15:59
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+table_create(107)[DEBUG]表已经存在:t1
+value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+<module>(24)[DEBUG]2018-11-08 00:16:10
+模块或函数名(行号)[日志类型]日志信息
+__init__(36)[DEBUG]Opened database successfully:test01.db
+table_create(107)[DEBUG]表已经存在:test0001
+value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.
+table_create(107)[DEBUG]表已经存在:t1
+value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
+value_insert(209)[DEBUG]Insert values is successful.

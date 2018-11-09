@@ -23,7 +23,7 @@ logging.basicConfig(filename='SQLiteRunInfo.log',
 logging.debug(time.strftime("%Y-%m-%d %H:%M:%S",
                             time.localtime())+'\n模块或函数名(行号)[日志类型]日志信息')
 
-class DBT:
+class Dbt:
     '''
     操作sqlite数据库的类
     '''
@@ -71,6 +71,7 @@ class DBT:
             return True
         except:
             logging.error('Drop table fail ! (%s)' % sql_command)
+            return False
 
     # 变更表名，给表改名
     def table_rename(self, name_old, name_new):
@@ -102,11 +103,12 @@ class DBT:
                      table_name='test_user',
                      column_list=['ID Integer PRIMARY KEY autoincrement',
                                   'name   text', 'age int']):
-        logging.debug('开始创建表：%s' % table_name)
-        if self.is_teble_exist(table_name): return '文件已经存在！'
+        if self.is_teble_exist(table_name):
+            logging.debug('表已经存在:'+ table_name)
+            return True
         if len(column_list) == 0:
-            logging.WARNING('字段参数列表不能为空！')
-            return '字段参数列表不能为空'
+            logging.WARNING('建表失败，没有传递字段参数列表：'+table_name)
+            return False
         try:
             sql = 'create table '+table_name+' ('
             for x in column_list:
@@ -115,10 +117,13 @@ class DBT:
             logging.debug(sql)
             self.cursor.execute(sql)
             self.connect.commit()
-            logging.debug("Table created done")
+            logging.debug("Table created done："+sql)
         except:
-            logging.debug("Table created error")
-        if self.is_teble_exist(table_name): logging.debug('Create table successfully !')
+            logging.debug("Table created error: "+sql)
+            return False
+        if self.is_teble_exist(table_name):
+            logging.debug('Create table successfully !')
+            return True
 
     # 查询表的结构
     def query_table_structure(self, table_name=None):
