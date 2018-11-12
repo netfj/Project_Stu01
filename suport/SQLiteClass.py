@@ -17,11 +17,13 @@ import sqlite3
 import logging
 import time
 
-logging.basicConfig(filename='SQLiteRunInfo.log',
-                    level=logging.DEBUG,
-                    format="%(funcName)s(%(lineno)d)[%(levelname)s]%(message)s")
-logging.debug(time.strftime("%Y-%m-%d %H:%M:%S",
-                            time.localtime())+'\n模块或函数名(行号)[日志类型]日志信息')
+def log_config(log_name='SQLiteRunInfo.log'):
+    logging.basicConfig(filename=log_name,
+                        level=logging.DEBUG,
+                        format="%(funcName)s(%(lineno)d)[%(levelname)s]%(message)s")
+    logging.debug(time.strftime("%Y-%m-%d %H:%M:%S",
+                                time.localtime()) + '\n模块或函数名(行号)[日志类型]日志信息')
+    logging.debug('日志设置完成：'+log_name)
 
 class Dbt:
     '''
@@ -30,20 +32,34 @@ class Dbt:
 
     ###  第 1 部分：数据库  #############################
 
-    def __init__(self, DatabaseName='test.db'):
-        self.connect = sqlite3.connect(DatabaseName)    #连接数据库，没有则建立
-        self.cursor = self.connect.cursor()             #取得游标
-        logging.debug("Opened database successfully:%s" % DatabaseName)
+    def __init__(self):
+        pass
+
+    def database_connect(self,DatabaseName='test.db'):
+        try:
+            self.connect = sqlite3.connect(DatabaseName)    #连接数据库，没有则建立
+            self.cursor = self.connect.cursor()  # 取得游标
+            logging.debug("Opened database successfully:%s" % DatabaseName)
+            return True
+        except Exception as e:
+            logging.error('Open database error: ' + repr(e))
+            return False
+        finally:
+            logging.debug('Open database: ' + DatabaseName)
+
+    def database_disconnect(self):
+        '''断开数据库'''
+        self.connect.close()
 
     #查询数据库中的所有表，返回值：列表（性质，表名，表名，rootpage，建表命令）
-    def query_all_tables(self):
+    def tables_all_get(self):
         '''查询表'''
-        return self.cursor.execute("SELECT * FROM sqlite_master WHERE type='table' ORDER BY name;")
+        self.cursor.execute("SELECT * FROM sqlite_master WHERE type='table' ORDER BY name;")
+        return self.cursor.fetchall()
 
+        ###  第 2 部分：表   ###################
 
-    ###  第 2 部分：表   ###################
-
-    def is_teble_exist(self, table_name):        #判断一个表是否存在
+    def teble_is_exist(self, table_name):        #判断一个表是否存在
         query = "SELECT count(*) FROM sqlite_master " \
                 "WHERE type='table' AND name='%s' ;" % table_name
         self.cursor.execute(query)
@@ -62,7 +78,7 @@ class Dbt:
             msg = 'Reference: .table_drop(table_name)'
             logging.error('Table name is losted !\n ' + msg)
             return False
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             return True
         sql_command = 'drop table %s' % table_name
         try:
@@ -80,10 +96,10 @@ class Dbt:
             msg = 'Reference: .TableRname(name_old,name_new)'
             logging.error('Table name is losted !\n ' + msg)
             return False
-        if self.is_teble_exist(name_old) == False:
+        if self.teble_is_exist(name_old) == False:
             logging.error('Table is NOT exist !')
             return False
-        if self.is_teble_exist(name_new):
+        if self.teble_is_exist(name_new):
             logging.error('Table (new name) already is exist !')
             return False
         sql_command = 'alter table %s rename to %s' % \
@@ -103,7 +119,7 @@ class Dbt:
                      table_name='test_user',
                      column_list=['ID Integer PRIMARY KEY autoincrement',
                                   'name   text', 'age int']):
-        if self.is_teble_exist(table_name):
+        if self.teble_is_exist(table_name):
             logging.debug('表已经存在:'+ table_name)
             return True
         if len(column_list) == 0:
@@ -121,18 +137,18 @@ class Dbt:
         except:
             logging.debug("Table created error: "+sql)
             return False
-        if self.is_teble_exist(table_name):
+        if self.teble_is_exist(table_name):
             logging.debug('Create table successfully !')
             return True
 
     # 查询表的结构
-    def query_table_structure(self, table_name=None):
+    def table_structure_get(self, table_name=None):
         '''查询表结构'''
         if table_name == None:
             msg = '需要一个参数：表名'
             logging.error(msg)
             return [msg]
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.error('Table is NOT exist !("%s") '  % (table_name))
             return False
         sql = 'PRAGMA table_info("%s") ;'  % (table_name)
@@ -144,7 +160,7 @@ class Dbt:
 
     # 增加一个列
     def column_add(self, table_name='test_user', column_add='column_add_test text'):
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.debug('Table is NOT exist: %s' % table_name)
             return False
         sql_command = 'alter table %s ADD %s;' % \
@@ -195,7 +211,7 @@ class Dbt:
                         ".value_insert('test_name',\"('name','age')\",\"('Tom',20),('Kite',21)\""
             logging.info(reference)
             return reference
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.debug('Table is NOT exist: %s' % table_name)
             return False
         if len(str.rstrip(str.lstrip(value_insert))) == 0:
@@ -219,7 +235,7 @@ class Dbt:
                               columns='',
                               value_insert=[(1, 'Tom', 20),
                                             (2, 'Kit', 23)]):
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.debug('Table is NOT exist: %s' % table_name)
             return False
         if len(value_insert) == 0:
@@ -237,7 +253,7 @@ class Dbt:
     # 插入一条记录, 用法：mydbt.value_insertOne('tb1',{'name':'TomOne','age':10})
     def value_insertOne_old(self, table_name='test_user',
                             value_insert={'name':'testInserOne', 'age':1}):
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.debug('Table is NOT exist: %s' % table_name)
             return False
         if len(value_insert) == 0: return '无数据传入'
@@ -264,7 +280,7 @@ class Dbt:
                                               ('testvalue_insert_multi1',88),
                                               ('testvalue_insert_multi2',99)]):
         logging.debug('value_insertMulti 开始执行')
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.debug('Table is NOT exist: %s' % table_name)
             return False
         if len(InertValueList) == 0: return '无数据传入'
@@ -316,7 +332,7 @@ class Dbt:
     def value_delete(self, table_name='test_user', condition=0):
         '''删除记录'''
         help = 'Reference: .value_delete(table_name,condition)'
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.error('Table is NOT exist: %s' % table_name)
             return False
         sql_command = 'delete from %s where %s ' % \
@@ -339,7 +355,7 @@ class Dbt:
     # 如果要将递增数归零: DELETE FROM sqlite_sequence WHERE name = 'table_name';
     # 或者：UPDATE sqlite_sequence SET seq = 0 WHERE name = 'table_name';
     def value_truncate(self, table_name):
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             logging.error('Table is NOT exist: %s' % table_name)
             return False
         try:
@@ -358,10 +374,10 @@ class Dbt:
             return False
 
     ###  第 4 部分：表的记录 （增删改查） -- 第 3 节：改   ######
-    def recorde_update(self, table_name='test_user',
+    def value_update(self, table_name='test_user',
                        set_new_value=None, condition=True):
-        msg = 'Reference: .recorde_update(table_name,set_new_value,condition)'
-        if self.is_teble_exist(table_name) == False:
+        msg = 'Reference: .value_update(table_name,set_new_value,condition)'
+        if self.teble_is_exist(table_name) == False:
             logging.error('Table is NOT exist: %s' % table_name)
             return False
         if set_new_value == None:
@@ -384,7 +400,7 @@ class Dbt:
     # 查询一个表
     def query_table(self, table_name='test_user'):
         '''查询一个表'''
-        if self.is_teble_exist(table_name) == False:
+        if self.teble_is_exist(table_name) == False:
             msg = ['查询错误，表不存在：%s' % table_name]
             logging.error(msg[0])
             return msg
@@ -410,6 +426,7 @@ class Dbt:
 
     def test(self):
         '''test'''
+        self.database_connect()
         self.table_create()
         self.value_insert()
         retu = self.query_table()
@@ -418,7 +435,13 @@ class Dbt:
 
 
 if __name__ == "__main__":
-    T = DBT()
+    log_config()
+    T = Dbt()
     T.test()
-    T.column_add('test text')
-    T.value_insert('help')
+    print('=============')
+    print(T.query_table('test_user'))
+    print('---')
+    T.database_disconnect()
+
+    dbt2 = Dbt()
+    dbt2.database_connect('abcd.db')

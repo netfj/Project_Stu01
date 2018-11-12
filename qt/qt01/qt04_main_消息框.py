@@ -1,7 +1,7 @@
 #coding:utf-8
 """
 @info: 
-@author:NetFj @software:PyCharm @file:qt04_main.py @time:2018/11/4.21:23
+@author:NetFj @software:PyCharm @file:qt04_main_消息框.py @time:2018/11/4.21:23
 """
 
 import sys

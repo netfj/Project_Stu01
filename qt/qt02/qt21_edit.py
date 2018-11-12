@@ -55,6 +55,10 @@ class Ui_Form(object):
         self.pb2.clicked.connect(Form.open_files)
         self.pb3.clicked.connect(Form.change_font)
         self.pb4.clicked.connect(Form.change_color)
+        self.pb5.clicked.connect(Form.save_file)
+        self.pb6.clicked.connect(Form.page_config)
+        self.pb7.clicked.connect(Form.print_file)
+        self.pb8.clicked.connect(Form.clear_all)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):

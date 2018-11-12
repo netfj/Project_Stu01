@@ -162,11 +162,79 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pb5</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>save_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>165</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb6</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>page_config()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb7</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>print_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb8</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>clear_all()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>270</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>open_file()</slot>
   <slot>open_files()</slot>
   <slot>change_font()</slot>
   <slot>change_color()</slot>
+  <slot>save_file()</slot>
+  <slot>page_config()</slot>
+  <slot>print_file()</slot>
+  <slot>clear_all()</slot>
  </slots>
 </ui>
