@@ -1,7 +1,7 @@
 #coding:utf-8
 """
 @info: 色彩与字体选择框
-@author:NetFj @software:PyCharm @file:qt09_main.py @time:2018/11/5.15:22
+@author:NetFj @software:PyCharm @file:qt09_main_color_font.py @time:2018/11/5.15:22
 """
 
 import sys

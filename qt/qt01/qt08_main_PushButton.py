@@ -1,7 +1,7 @@
 #coding:utf-8
 """
 @info: 
-@author:NetFj @software:PyCharm @file:qt08_main.py @time:2018/11/5.14:55
+@author:NetFj @software:PyCharm @file:qt08_main_PushButton.py @time:2018/11/5.14:55
 """
 
 import sys

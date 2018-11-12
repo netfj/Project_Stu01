@@ -97,5 +97,76 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>pb1</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_file()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>609</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>396</x>
+     <y>24</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb2</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>open_files()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>577</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb3</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>change_font()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>95</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb4</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>change_color()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>130</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>252</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>open_file()</slot>
+  <slot>open_files()</slot>
+  <slot>change_font()</slot>
+  <slot>change_color()</slot>
+ </slots>
 </ui>
