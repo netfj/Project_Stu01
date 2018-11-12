@@ -7,8 +7,8 @@
 from suport.SQLiteClass import *
 
 dbt=Dbt()
-dbt.database_connect('test.db')
+dbt.database_connect('abc.db')
 dbt.table_create('t1')
 
-print(dbt.tables_all())
+print(dbt.tables_all_get()[1][0])
 

@@ -1,70 +1,46 @@
-
-<module>(24)[DEBUG]2018-11-07 23:59:01
+log_config(25)[DEBUG]2018-11-12 19:56:48
 模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-value_insert(200)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(204)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:05:17
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+database_connect(48)[DEBUG]Open database: test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+log_config(25)[DEBUG]2018-11-12 19:57:05
 模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-value_insert(202)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(206)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:05:54
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+database_connect(48)[DEBUG]Open database: test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+log_config(25)[DEBUG]2018-11-12 19:58:32
 模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(106)[DEBUG]表已经存在:test0001
-value_insert(202)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(206)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:10:40
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+database_connect(48)[DEBUG]Open database: test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+database_connect(42)[DEBUG]Opened database successfully:abcd.db
+database_connect(48)[DEBUG]Open database: abcd.db
+log_config(25)[DEBUG]2018-11-12 20:27:55
 模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:14:42
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+database_connect(48)[DEBUG]Open database: test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+database_connect(42)[DEBUG]Opened database successfully:abcd.db
+database_connect(48)[DEBUG]Open database: abcd.db
+log_config(25)[DEBUG]2018-11-12 20:28:52
 模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-table_create(117)[DEBUG]create table t1 (ID Integer PRIMARY KEY autoincrement,name   text,age int);
-table_create(120)[DEBUG]Table created done：create table t1 (ID Integer PRIMARY KEY autoincrement,name   text,age int);
-table_create(125)[DEBUG]Create table successfully !
-value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:15:26
-模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-table_create(107)[DEBUG]表已经存在:t1
-value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:15:48
-模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-table_create(107)[DEBUG]表已经存在:t1
-value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:15:59
-模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-table_create(107)[DEBUG]表已经存在:t1
-value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-<module>(24)[DEBUG]2018-11-08 00:16:10
-模块或函数名(行号)[日志类型]日志信息
-__init__(36)[DEBUG]Opened database successfully:test01.db
-table_create(107)[DEBUG]表已经存在:test0001
-value_insert(205)[DEBUG]insert into test0001 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
-table_create(107)[DEBUG]表已经存在:t1
-value_insert(205)[DEBUG]insert into t1 ('name','age') values ('Tom',20);
-value_insert(209)[DEBUG]Insert values is successful.
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+database_connect(48)[DEBUG]Open database: test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+database_connect(42)[DEBUG]Opened database successfully:abcd.db
+database_connect(48)[DEBUG]Open database: abcd.db

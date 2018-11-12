@@ -45,7 +45,7 @@ class Dbt:
             logging.error('Open database error: ' + repr(e))
             return False
         finally:
-            logging.debug('Open database: ' + DatabaseName)
+            pass
 
     def database_disconnect(self):
         '''断开数据库'''
@@ -54,7 +54,7 @@ class Dbt:
     #查询数据库中的所有表，返回值：列表（性质，表名，表名，rootpage，建表命令）
     def tables_all_get(self):
         '''查询表'''
-        self.cursor.execute("SELECT * FROM sqlite_master WHERE type='table' ORDER BY name;")
+        self.cursor.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name;")
         return self.cursor.fetchall()
 
         ###  第 2 部分：表   ###################
