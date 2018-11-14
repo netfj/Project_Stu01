@@ -17,3 +17,4 @@ class fab(n,a=0,b=1):
 
 f = fab(10)
 
+print(f)

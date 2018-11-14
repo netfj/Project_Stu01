@@ -18,6 +18,9 @@ from qt22_brower import Ui_Form
 
 #新建一个类，继承QT设计的界面，实现业务与界面的分离
 class myWin(QtWidgets.QWidget,Ui_Form):
+    db=''
+    tb=''
+    record=0
     def __init__(self):
         super(myWin,self).__init__()
         self.setupUi(self)
