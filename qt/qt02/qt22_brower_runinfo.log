@@ -1,0 +1,279 @@
+logging_set.py(36)log_config[INFO]2018-11-12 22:46:08
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(215)value_insert[DEBUG]Table is NOT exist: test_name
+SQLiteClass.py(215)value_insert[DEBUG]Table is NOT exist: test_name
+logging_set.py(36)log_config[INFO]2018-11-12 22:46:39
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+logging_set.py(36)log_config[INFO]2018-11-12 22:50:14
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:00:03
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:00:54
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:10:03
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+logging_set.py(36)log_config[INFO]2018-11-12 23:10:47
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:11:39
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:12:07
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:15:54
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+logging_set.py(36)log_config[INFO]2018-11-12 23:16:28
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+logging_set.py(36)log_config[INFO]2018-11-12 23:28:15
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(149)table_structure_get[ERROR]需要一个参数：表名
+SQLiteClass.py(149)table_structure_get[ERROR]需要一个参数：表名
+SQLiteClass.py(149)table_structure_get[ERROR]需要一个参数：表名
+SQLiteClass.py(149)table_structure_get[ERROR]需要一个参数：表名
+logging_set.py(36)log_config[INFO]2018-11-12 23:30:01
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:32:12
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:32:45
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:34:31
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:34:50
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:37:52
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:39:42
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+logging_set.py(36)log_config[INFO]2018-11-12 23:39:57
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:40:37
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:41:03
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:42:54
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-12 23:49:43
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-14 07:24:02
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-14 07:26:00
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+logging_set.py(36)log_config[INFO]2018-11-14 07:30:13
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+logging_set.py(36)log_config[INFO]2018-11-14 18:31:31
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/abc.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(42)database_connect[DEBUG]Opened database successfully:D:/微云同步助手/1571257122/QQ网盘/FjUse/Python/Project_Stu01/qt/qt02/test.db
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(221)value_insert[DEBUG]insert into t1 ('name','age') values ('Tom',20),('Kite',21);
+SQLiteClass.py(225)value_insert[DEBUG]Insert values is successful.
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("sqlite_sequence") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+SQLiteClass.py(155)table_structure_get[DEBUG]PRAGMA table_info("t1") ;
+logging_set.py(36)log_config[INFO]2018-11-14 18:39:27
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+logging_set.py(36)log_config[INFO]2018-11-14 18:52:02
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
+logging_set.py(36)log_config[INFO]2018-11-14 18:55:38
+ 日志风格：simplify  日志等级：10.DEBUG  文件名：qt22_brower_runinfo.log
+ 模块  (行号)  模块或函数名  [等级]  信息内容
