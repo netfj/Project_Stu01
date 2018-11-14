@@ -1,7 +1,7 @@
 #coding:utf-8
 """
 Info: 题目：利用递归方法求5!。
-@author:Netfj@sina.com  @software: PyCharm @file: e26.py @time: 2018/11/3 22:32
+@author:Netfj@sina.com  @software: PyCharm @file: e026.py @time: 2018/11/3 22:32
 """
 
 
