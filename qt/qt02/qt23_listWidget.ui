@@ -22,6 +22,31 @@
      <height>381</height>
     </rect>
    </property>
+   <property name="iconSize">
+    <size>
+     <width>0</width>
+     <height>199</height>
+    </size>
+   </property>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+    <property name="checkState">
+     <enum>Checked</enum>
+    </property>
+    <property name="flags">
+     <set>NoItemFlags</set>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>新建项目</string>
+    </property>
+    <property name="checkState">
+     <enum>Unchecked</enum>
+    </property>
+   </item>
   </widget>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -29,7 +54,7 @@
      <x>280</x>
      <y>10</y>
      <width>160</width>
-     <height>431</height>
+     <height>331</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -460,5 +485,6 @@ p, li { white-space: pre-wrap; }
   <slot>list_item_clicked()</slot>
   <slot>list_text_changed()</slot>
   <slot>checkBox_sort_auto()</slot>
+  <slot>list_indexes_moved()</slot>
  </slots>
 </ui>

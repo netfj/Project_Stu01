@@ -16,6 +16,7 @@ class myWin(QtWidgets.QWidget,Ui_Form):
         super(myWin,self).__init__()
         self.setupUi(self)
 
+
     def start(self):
         print('增加项目')
         self.listWidget.addItem('1.Test One')
@@ -40,6 +41,7 @@ class myWin(QtWidgets.QWidget,Ui_Form):
                     MultiSelection       点击多选
                     ContiguousSelection  鼠标拖拉多选
         '''
+
 
     def add(self):
         t = self.lineEdit.text()
@@ -85,8 +87,7 @@ class myWin(QtWidgets.QWidget,Ui_Form):
         pass
 
     def list_text_changed(self,QString):
-        # print(QString)
-        pass
+        print(QString)
 
     def list_row_changed(self,Qint):
         msg = '过程名：list_row_changed(self,Qint)\n'
@@ -95,13 +96,18 @@ class myWin(QtWidgets.QWidget,Ui_Form):
 
     def list_clicked(self,QModeIndex):
         print('\nlist_clicked(self,QModeIndex)',end=' --> ')
-        print(QModeIndex)
-        pass
+        print(QModeIndex.row())
+        # print(QModeIndex)
+        # print(dir(QModeIndex))
 
     def list_item_clicked(self,*QListWidgetItem):
+        # print('#######################')
         # print(QListWidgetItem)
         # print(QListWidgetItem[0])
+        # print(dir(QListWidgetItem[0]))
         # print(QListWidgetItem[0].text())
+        # print(QListWidgetItem[0].text())
+
 
         msg = '过程名：list_item_clicked(self,*QListWidgetItem) \n'
         msg += '返回值是个元组\n'
@@ -111,12 +117,12 @@ class myWin(QtWidgets.QWidget,Ui_Form):
             msg += x.text()+'\n'
         self.tb_item_clicked.setText(msg)
 
-        pass
-
+# print(dir(Ui_Form))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     myshow = myWin()
     myshow.show()
     sys.exit(app.exec())
+
 

@@ -1,10 +1,4 @@
-abc
-ekalsdjf
-sadfjkaslkd.f
-sdfjkiaslkdfjlkaslkjfl;ksadf
-asdfohjasl;kdfs
-D
-
-
-
-asfdkllaksdjflkasjkldfj;asfdasdfas
+    def list_row_changed(self,Qint):
+        msg = '过程名：list_row_changed(self,Qint)\n'
+        msg += '传入参数Qint(当前行号)：' + str(Qint) + '\n'
+        self.tb_r.setText(msg)
