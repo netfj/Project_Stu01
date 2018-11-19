@@ -4,8 +4,8 @@
 @author:NetFj @software:PyCharm @file:qt54_calendarWidget.py @time:2018/11/19.8:12
 """
 import sys
-from PyQt5 import QtWidgets,QtCore,QtGui
-from PyQt5.QtWidgets import *
+from PyQt5 import QtWidgets,QtCore
+from PyQt5.QtWidgets import QApplication,QCalendarWidget
 
 def calendar_selectionChanged():
     data = calendar.selectedDate().toString("yyyy-MM-dd dddd")
