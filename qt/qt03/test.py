@@ -7,21 +7,20 @@
 import sys
 from PyQt5 import QtWidgets,QtCore,QtGui
 from PyQt5.QtWidgets import *
-
-app = QApplication(sys.argv)
-a= QWidget()
-a.resize(400,300)
-calendar = QCalendarWidget(a)
-calendar.setGeometry(QtCore.QRect(0, 0, 400, 300))
-a.show()
-sys.exit(app.exec_())
-
-def calendar_selectionChanged():
-    data = calendar.selectedDate().toString("yyyy-MM-dd dddd")
-    print(data)
-app = QApplication(sys.argv)
-calendar = QCalendarWidget()
-calendar.setGeometry(QtCore.QRect(0, 0, 400, 300))
-calendar.selectionChanged.connect(calendar_selectionChanged)
-calendar.show()
-sys.exit(app.exec_())
+from PyQt5 import QtWidgets
+from PyQt5 import QtGui
+import sys
+app = QtWidgets.QApplication (sys.argv)
+window = QtWidgets.QWidget ()
+window.setWindowTitle ("QToolBox")
+window.resize (200, 100)
+toolBox = QtWidgets.QToolBox ()
+toolBox.addItem (QtWidgets.QPushButton ("Tab Content 1"), "Tab &1")
+toolBox.addItem (QtWidgets.QLabel ("Tab Content 2"), "Tab &2")
+toolBox.addItem (QtWidgets.QLabel ("Tab Content 3"),QtGui.QIcon('editcut.png'), "Tab &3")
+toolBox.setCurrentIndex (0)
+vbox = QtWidgets.QVBoxLayout ()
+vbox.addWidget (toolBox)
+window.setLayout (vbox)
+window.show ()
+sys.exit (app.exec_ ())

@@ -15,5 +15,7 @@ widgets=QWidget()         #Qwidget组件是PyQt5中所有用户界面类的基�
 widgets.resize(300,300)   #设置这个Widget的界面大小
 widgets.move(200,200)     #设置显示的位置
 widgets.setWindowTitle('Example')#窗体的标题
+
+
 widgets.show()
 sys.exit(app.exec())

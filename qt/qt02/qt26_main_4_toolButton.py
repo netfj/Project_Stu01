@@ -43,6 +43,7 @@ class myForm(QtWidgets.QWidget,Ui_Form):
             print('alipay')
         elif self.sender() == self.wechatAct:
             print('wechat')
+            QDesktopServices.openUrl(QUrl('https://www.visa.com.cn/'))
 
 
     def pushButton_clicked(self):
