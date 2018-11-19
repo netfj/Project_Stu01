@@ -34,7 +34,5 @@ widgets.setIconSize(QSize(125, 125))
 # 设置项目背景色
 widgets.item(1).setBackground(QColor('green'))
 
-
-
 widgets.show()
 sys.exit(app.exec())

@@ -4,11 +4,11 @@
 @author:NetFj @software:PyCharm @file:qt23_main.py @time:2018/11/14.19:11
 """
 
-import sys,time
-from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtWidgets import *
-from PyQt5.QtCore import *
-from PyQt5.QtGui import *
+import sys
+from PyQt5 import QtWidgets     ##, QtGui, QtCore
+from PyQt5.QtWidgets import QAbstractItemView
+#from PyQt5.QtCore import *
+#from PyQt5.QtGui import *
 from qt23_listWidget import Ui_Form
 
 class myWin(QtWidgets.QWidget,Ui_Form):
