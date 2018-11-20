@@ -1,6 +1,6 @@
 #coding:utf-8
 """
-@info: 
+@info: QTreeWidget 练习
 @author:NetFj @software:PyCharm @file:qt07_treeWidget.py @time:2018/11/20.11:32
 """
 
