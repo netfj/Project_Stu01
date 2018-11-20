@@ -5,22 +5,23 @@
 """
 
 import sys
-from PyQt5 import QtWidgets,QtCore,QtGui
+from PyQt5 import *
 from PyQt5.QtWidgets import *
-from PyQt5 import QtWidgets
-from PyQt5 import QtGui
-import sys
-app = QtWidgets.QApplication (sys.argv)
-window = QtWidgets.QWidget ()
-window.setWindowTitle ("QToolBox")
-window.resize (200, 100)
-toolBox = QtWidgets.QToolBox ()
-toolBox.addItem (QtWidgets.QPushButton ("Tab Content 1"), "Tab &1")
-toolBox.addItem (QtWidgets.QLabel ("Tab Content 2"), "Tab &2")
-toolBox.addItem (QtWidgets.QLabel ("Tab Content 3"),QtGui.QIcon('editcut.png'), "Tab &3")
-toolBox.setCurrentIndex (0)
-vbox = QtWidgets.QVBoxLayout ()
-vbox.addWidget (toolBox)
-window.setLayout (vbox)
-window.show ()
-sys.exit (app.exec_ ())
+from PyQt5.QtGui import *
+from PyQt5.QtCore import *
+
+
+#直接运行程序时的入口
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    app.aboutToQuit.connect(app.deleteLater)
+    #Window系统提供的模式
+    model = QDirModel()
+    #创建一个QtreeView部件
+    tree = QTreeView()
+    #为部件添加模式
+    tree.setModel(model)
+    tree.setWindowTitle(tree.tr("Dir View"))
+    tree.resize(640, 480)
+    tree.show()
+    sys.exit(app.exec_())
