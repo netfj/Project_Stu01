@@ -44,6 +44,7 @@ class myForm(QWidget):
         self.pb4 = QPushButton(self)
         self.pb5 = QPushButton(self)
         self.pb6 = QPushButton(self)
+        self.pb7 = QPushButton(self)
 
         self.pb1.setGeometry(510,  0,200,35)
         self.pb2.setGeometry(510, 40,200,35)
@@ -51,6 +52,7 @@ class myForm(QWidget):
         self.pb4.setGeometry(510,120,200,35)
         self.pb5.setGeometry(510,160,200,35)
         self.pb6.setGeometry(510,200,200,35)
+        self.pb7.setGeometry(510,240,200,35)
 
     def data_init(self):
 
@@ -91,11 +93,12 @@ class myForm(QWidget):
 
     def single_slot_setup(self):
         self.pb1.setText('&1.当前所有选中节点的信息')
-        self.pb2.setText('&2.当前节点(激活)的信息')
+        self.pb2.setText('&2.当前激活的节点信息')
         self.pb3.setText('&3.遍历')
-        self.pb4.setText('&4.')
-        self.pb5.setText('&5.')
-        self.pb6.setText('&6.')
+        self.pb4.setText('&4.增')
+        self.pb5.setText('&5.删')
+        self.pb6.setText('&6.改')
+        self.pb7.setText('&7.查')
 
         self.pb1.clicked.connect(self.solt_pb1_clicked)
         self.pb2.clicked.connect(self.solt_pb2_clicked)
@@ -139,7 +142,7 @@ class myForm(QWidget):
         else:
             info2 += '无(本身是一级节点)'
 
-        info3 = '\n    子节点数:'
+        info3 = '    子节点数:'
         n_childCount = item.childCount()
         info3 += str(n_childCount)
 
@@ -169,7 +172,7 @@ class myForm(QWidget):
         else:
             info13 = '  父节点：无（它本身是一级节点）'
 
-        # 通过 index 定位
+        # 通过 index 定位 ：依次求出其父节点的排序（直至顶层一级），形成定位序列
         index = self.treeWidget.currentIndex()
         position = []
         while 1:
@@ -178,8 +181,9 @@ class myForm(QWidget):
                 index = index.parent()
             else:
                 break
-        info14 = '  定位序列（在各级节点中的排序）：' + '-'.join([str(x) for x in position])
+        info14 = '  定位序列（在各级节点中的排序；第1项从0开始）：' + '-'.join([str(x) for x in position])
 
+        # 通过定位序列，求出 节点对象
         info15 = '  当前节点的文本：'
         if len(position)>0:
             x = position.pop(0)
@@ -197,7 +201,18 @@ class myForm(QWidget):
 
     def solt_pb3_clicked(self):
         self.p('\nsolt_pb3_clicked 3.遍历:')
+        n = self.treeWidget.topLevelItemCount()
+        for i in range(n):
+            item = self.treeWidget.topLevelItem(i)
+            self.recursive_item_child(str(i+1),item)     #调用递归函数把子节点求出
 
+    def recursive_item_child(self,lead,item):
+        #本递归函数用于求出一级节点以下的所有子、孙节点
+        self.p('['+lead+']'+item.text(0) + '|' + item.text(1))
+        n = item.childCount()
+        if n>0:
+            for m in range(n):
+                self.recursive_item_child(lead+'.'+str(m+1),item.child(m))
 
     def slot_treeWidget_itemClicked(self,item,column_int):
         self.p('\nslot_treeWidget_itemClicked:')
@@ -207,7 +222,6 @@ class myForm(QWidget):
         if len(list)>0:
             for x in list:
                 self.textBrowser.append(str(x))
-
 
 app = QApplication(sys.argv)
 myshow = myForm()
