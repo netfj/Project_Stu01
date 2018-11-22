@@ -1,10 +1,13 @@
-#coding:utf-8
+prent#coding:utf-8
 """
-@info: 
-@author:NetFj @software:PyCharm @file:qt0702_treeWidget_single_slot.py @time:2018/11/21.16:15
+info:   QtTreeWidget 综合练习示例
+author: NetFj@sina.com 
+file:   qt0702_treeWidget_single_slot.py
+time:   2018/11/21.16:15
 """
 
 import sys
+from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -34,7 +37,7 @@ class myForm(QWidget):
 
         # textBrowser : 用于显示执行结果，或提示
         self.textBrowser = QTextBrowser(self)
-        self.textBrowser.setGeometry(0,410,800,300)
+        self.textBrowser.setGeometry(0,410,920,300)
         self.textBrowser.setText('【textBrowser Display】')
 
         # pushButton
@@ -45,7 +48,6 @@ class myForm(QWidget):
         self.pb5 = QPushButton(self)
         self.pb6 = QPushButton(self)
         self.pb7 = QPushButton(self)
-
         self.pb1.setGeometry(510,  0,200,35)
         self.pb2.setGeometry(510, 40,200,35)
         self.pb3.setGeometry(510, 80,200,35)
@@ -53,6 +55,25 @@ class myForm(QWidget):
         self.pb5.setGeometry(510,160,200,35)
         self.pb6.setGeometry(510,200,200,35)
         self.pb7.setGeometry(510,240,200,35)
+
+        # checkBox
+        self.checkBox1 = QCheckBox(self)
+        self.checkBox2 = QCheckBox(self)
+        self.checkBox3 = QCheckBox(self)
+        self.checkBox4 = QCheckBox(self)
+        self.checkBox5 = QCheckBox(self)
+        self.checkBox6 = QCheckBox(self)
+        self.checkBox7 = QCheckBox(self)
+        self.checkBox8 = QCheckBox(self)
+        self.checkBox1.setGeometry(720,  0,200,25)
+        self.checkBox2.setGeometry(720, 30,200,25)
+        self.checkBox3.setGeometry(720, 60,200,25)
+        self.checkBox4.setGeometry(720, 90,200,25)
+        self.checkBox5.setGeometry(720,120,200,25)
+        self.checkBox6.setGeometry(720,150,200,25)
+        self.checkBox7.setGeometry(720,180,200,25)
+        self.checkBox8.setGeometry(720,240,200,25)
+
 
     def data_init(self):
 
@@ -92,6 +113,7 @@ class myForm(QWidget):
         self.treeWidget.expandAll()  # 展开所有节点
 
     def single_slot_setup(self):
+        # pb按钮
         self.pb1.setText('&1.当前所有选中节点的信息')
         self.pb2.setText('&2.当前激活的节点信息')
         self.pb3.setText('&3.遍历')
@@ -99,14 +121,108 @@ class myForm(QWidget):
         self.pb5.setText('&5.删')
         self.pb6.setText('&6.改')
         self.pb7.setText('&7.查')
-
         self.pb1.clicked.connect(self.solt_pb1_clicked)
         self.pb2.clicked.connect(self.solt_pb2_clicked)
         self.pb3.clicked.connect(self.solt_pb3_clicked)
         self.pb4.clicked.connect(self.solt_pb4_clicked)
         self.pb5.clicked.connect(self.solt_pb5_clicked)
+        self.pb6.clicked.connect(self.solt_pb6_clicked)
 
+        # 复选框
+        self.checkBox1.setText('可选择')
+        self.checkBox2.setText('可编辑')
+        self.checkBox3.setText('可被拖拉')
+        self.checkBox4.setText('可拖放目标（接受）')
+        self.checkBox5.setText('用户可检查')
+        self.checkBox6.setText('可用')
+        self.checkBox7.setText('拥有第三选择状态（半选）')
+        self.checkBox8.setText('选择框状态')
+        self.checkBox1.toggled.connect(self.slot_checkBox1_toggled)
+        self.checkBox2.toggled.connect(self.slot_checkBox2_toggled)
+        self.checkBox3.toggled.connect(self.slot_checkBox3_toggled)
+        self.checkBox4.toggled.connect(self.slot_checkBox4_toggled)
+        self.checkBox5.toggled.connect(self.slot_checkBox5_toggled)
+        self.checkBox6.toggled.connect(self.slot_checkBox6_toggled)
+        self.checkBox7.toggled.connect(self.slot_checkBox7_toggled)
+        self.checkBox8.toggled.connect(self.slot_checkBox8_toggled)
+
+        # 树对象 的 信号与槽
         self.treeWidget.itemClicked.connect(self.slot_treeWidget_itemClicked)
+        self.treeWidget.itemSelectionChanged.connect(self.slot_treeWidget_itemSelectionChanged)
+
+
+
+    def slot_checkBox1_toggled(self,b):
+        self.p('\nslot_checkBox1_toggled: 可被选择')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsSelectable)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsSelectable)
+
+    def slot_checkBox2_toggled(self,b):
+        self.p('\nslot_checkBox2_toggled: 可编辑')
+        # 设置文本是否可编辑
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsEditable)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsEditable)
+
+        # 检验是否可编辑
+        flags = item.flags()
+        if flags & QtCore.Qt.ItemIsEditable:
+            self.p("当前节点文本是可编辑的(ItemIsEditable)")
+        else:
+            self.p("当前节点文本是不可编辑的(NOT ItemIsEditable)")
+
+    def slot_checkBox3_toggled(self, b):
+        self.p('\nslot_checkBox3_toggled: 可被拖拉')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsDragEnabled)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsDragEnabled)
+
+    def slot_checkBox4_toggled(self, b):
+        self.p('\nslot_checkBox4_toggled: 可拖放目标（接受）')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsDropEnabled)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsDropEnabled)
+
+    def slot_checkBox5_toggled(self, b):
+        self.p('\nslot_checkBox5_toggled: 用户可检查')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsUserCheckable)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsUserCheckable)
+
+    def slot_checkBox6_toggled(self, b):
+        self.p('\nslot_checkBox6_toggled: 可用')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsEnabled)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsEnabled)
+
+    def slot_checkBox7_toggled(self, b):
+        self.p('\nslot_checkBox7_toggled: 拥有第三选中状态（半选中）')
+        item = self.treeWidget.currentItem()
+        if b:
+            item.setFlags(item.flags() | QtCore.Qt.ItemIsTristate)
+        else:
+            item.setFlags(item.flags() & ~QtCore.Qt.ItemIsTristate)
+
+    def slot_checkBox8_toggled(self, b):
+        self.p('\nslot_checkBox8_toggled: 选择框')
+        if b:
+            self.treeWidget.currentItem().setCheckState(0, Qt.Checked)
+        else:
+            self.treeWidget.currentItem().setCheckState(0, Qt.Unchecked)
+
 
     def solt_pb1_clicked(self):
         self.p('\nsolt_pb1_clicked: 1.当前所有选中节点的信息')
@@ -251,6 +367,7 @@ class myForm(QWidget):
 
     def solt_pb5_clicked(self):
         self.p('\nsolt_pb5_clicked 5.删:')
+
         item_current = self.treeWidget.currentItem()
         index = self.treeWidget.currentIndex()
 
@@ -258,12 +375,22 @@ class myForm(QWidget):
             self.p('  当前没有节点可供删除, 或没有节点被选中激活!')
             return
 
-        self.p('删除一个节点，注意其子结点将一同被删除！')
-        self.p('  当前节点是：' + item_current.text(0) + '|' + item_current.text(1))
-        self.p('    删除...')
+        self.p('使用 removeChild() 实现')
+        self.p('  删除一个节点，注意其子结点将一同被删除！')
+        self.p('    当前节点是：' + item_current.text(0) + '|' + item_current.text(1))
+        self.p('      删除...（结果可能滞后)...')
         root = self.treeWidget.invisibleRootItem()
         (item_current.parent() or root).removeChild(item_current)
-        self.p('           OK!')
+        self.p('      删除...（结果可能滞后)...OK!')
+
+    def solt_pb6_clicked(self):
+        self.p('\nsolt_pb6_clicked 5.改:')
+        item_current = self.treeWidget.currentItem()
+        index = self.treeWidget.currentIndex()
+
+        if (item_current == None or index.row()<0):
+            self.p('  当前没有节点可供操作, 或没有节点被选中激活!')
+            return
 
 
     def recursive_item_child(self,lead,item):
@@ -273,6 +400,64 @@ class myForm(QWidget):
         if n>0:
             for m in range(n):
                 self.recursive_item_child(lead+'.'+str(m+1),item.child(m))
+
+    def slot_treeWidget_itemSelectionChanged(self):     #选择的节点改变时
+        self.p('\nslot_treeWidget_itemSelectionChanged:')
+
+        # 检验是否可选择[1], 并更新 checkBox1
+        self.checkBox1.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsSelectable)
+        self.p('  可选择：'+str(self.checkBox1.isChecked()))
+
+        # 检验是否可编辑[2], 并更新 checkBox2 （这是个完整样本，语句较细）
+        item = self.treeWidget.currentItem()
+        flags = item.flags()
+        if flags & QtCore.Qt.ItemIsEditable:
+            self.p("  当前节点文本是可编辑的(ItemIsEditable)")
+            self.checkBox2.setChecked(True)
+        else:
+            self.p("  当前节点文本是不可编辑的(NOT ItemIsEditable)")
+            self.checkBox2.setChecked(False)
+        self.p('  可编辑：'+str(self.checkBox2.isChecked()))
+
+        # 检验是否可被拖位[4], 并更新 checkBox3
+        self.checkBox3.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsDragEnabled)
+        self.p('  可被拖：'+str(self.checkBox3.isChecked()))
+
+        # 检验是否可成为拖放目标（接受）[8], 并更新 checkBox4
+        self.checkBox4.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsDropEnabled)
+        self.p('  可接受拖放：'+str(self.checkBox4.isChecked()))
+
+        # 检验是否 用户可检查[16], 并更新 checkBox5
+        self.checkBox5.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsUserCheckable)
+        self.p('  用户可检查：'+str(self.checkBox5.isChecked()))
+
+        # 检验是否可用[32], 并更新 checkBox6
+        self.checkBox6.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsEnabled)
+        self.p('  可用：'+str(self.checkBox6.isChecked()))
+
+        # 检验是否 有第三状态（半选）[64], 并更新 checkBox7
+        self.checkBox7.setChecked(
+            self.treeWidget.currentItem().flags()
+            & QtCore.Qt.ItemIsTristate)
+        self.p('  是否有第三选择状态：'+str(self.checkBox7.isChecked()))
+
+        # 选择框, 并更新 checkBox8
+        if self.treeWidget.currentItem().checkState(0)==Qt.Checked:
+            self.checkBox8.setChecked(True)
+        else:
+            self.checkBox8.setChecked(False)
+        self.p('  选择：'+str(self.checkBox8.isChecked()))
+
 
     def slot_treeWidget_itemClicked(self,item,column_int):
         self.p('\nslot_treeWidget_itemClicked:')
