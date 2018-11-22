@@ -28,8 +28,8 @@ class myForm(QWidget):
         self.treeWidget.resize(500,400)                     #宽高
         self.treeWidget.setColumnCount(2)                   #列数
         self.treeWidget.setHeaderLabels(['第1列','第2列'])  #列名称
-        self.treeWidget.setColumnWidth(0,200)               #列宽
-        self.treeWidget.setColumnWidth(1,200)
+        self.treeWidget.setColumnWidth(0,300)               #列宽
+        self.treeWidget.setColumnWidth(1,100)
         self.treeWidget.setSelectionMode(3)                 #选择模式：Ctrl+多选
 
         # textBrowser : 用于显示执行结果，或提示
@@ -103,9 +103,10 @@ class myForm(QWidget):
         self.pb1.clicked.connect(self.solt_pb1_clicked)
         self.pb2.clicked.connect(self.solt_pb2_clicked)
         self.pb3.clicked.connect(self.solt_pb3_clicked)
+        self.pb4.clicked.connect(self.solt_pb4_clicked)
+        self.pb5.clicked.connect(self.solt_pb5_clicked)
 
         self.treeWidget.itemClicked.connect(self.slot_treeWidget_itemClicked)
-
 
     def solt_pb1_clicked(self):
         self.p('\nsolt_pb1_clicked: 1.当前所有选中节点的信息')
@@ -130,6 +131,12 @@ class myForm(QWidget):
 
     def solt_pb2_clicked(self):
         self.p('\nsolt_pb2_clicked 2.当前节点(激活)的信息:')
+
+        item = self.treeWidget.currentItem()
+        index = self.treeWidget.currentIndex()
+        if (item==None or index.row()<0):
+            self.p('  当前节点总数为0, 没有节点被选取!')
+            return
 
         info0 = '(1)self.treeWidget.currentItem():'
 
@@ -199,12 +206,65 @@ class myForm(QWidget):
         self.p(info14)
         self.p(info15)
 
+
     def solt_pb3_clicked(self):
         self.p('\nsolt_pb3_clicked 3.遍历:')
         n = self.treeWidget.topLevelItemCount()
         for i in range(n):
             item = self.treeWidget.topLevelItem(i)
             self.recursive_item_child(str(i+1),item)     #调用递归函数把子节点求出
+
+    def solt_pb4_clicked(self):
+        self.p('\nsolt_pb4_clicked 4.增:')
+        item_current = self.treeWidget.currentItem()
+        index = self.treeWidget.currentIndex()
+
+        if (item_current==None or index.row()<0):
+            self.p('  当前节点总数为0, 或没有节点被激活选中!')
+            self.p('    增加顶层节点1个: 顶1')
+            item = QTreeWidgetItem()
+            item.setText(0, '| 添加1个顶层节点：顶1')
+            self.treeWidget.addTopLevelItem(item)
+            return
+
+        self.p('当前节点是：' + item_current.text(0) +'|'+ item_current.text(1))
+
+        self.p('  1-->添加2个子节点：子1、子2')
+        item1 = QTreeWidgetItem()
+        item2 = QTreeWidgetItem()
+        item1.setText(0,'-->添加1个节点：子1')
+        item2.setText(0,'-->添加1个节点：子2')
+        item_list = [item1,item2]
+        item_current.addChildren(item_list)
+
+        self.p('  2<--添加2个同级节点：同1、同2')
+        item_add1 = QTreeWidgetItem()
+        item_add2 = QTreeWidgetItem()
+        item_add1.setText(0,'<--添加1个同级节点：同1')
+        item_add2.setText(0,'<--添加1个同级节点：同2')
+        if index.parent().row()>0:  # 判断是否是顶层节点
+            item_current.parent().addChild(item_add1)
+            item_current.parent().addChild(item_add2)
+        else:
+            self.treeWidget.addTopLevelItem(item_add1)
+            self.treeWidget.addTopLevelItem(item_add2)
+
+    def solt_pb5_clicked(self):
+        self.p('\nsolt_pb5_clicked 5.删:')
+        item_current = self.treeWidget.currentItem()
+        index = self.treeWidget.currentIndex()
+
+        if (item_current == None or index.row()<0):
+            self.p('  当前没有节点可供删除, 或没有节点被选中激活!')
+            return
+
+        self.p('删除一个节点，注意其子结点将一同被删除！')
+        self.p('  当前节点是：' + item_current.text(0) + '|' + item_current.text(1))
+        self.p('    删除...')
+        root = self.treeWidget.invisibleRootItem()
+        (item_current.parent() or root).removeChild(item_current)
+        self.p('           OK!')
+
 
     def recursive_item_child(self,lead,item):
         #本递归函数用于求出一级节点以下的所有子、孙节点
