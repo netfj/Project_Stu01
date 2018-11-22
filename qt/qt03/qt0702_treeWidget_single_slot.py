@@ -1,6 +1,7 @@
-prent#coding:utf-8
+#coding:utf-8
 """
 info:   QtTreeWidget 综合练习示例
+soft:   Python X64 ver 3.7, PyQt5
 author: NetFj@sina.com 
 file:   qt0702_treeWidget_single_slot.py
 time:   2018/11/21.16:15
@@ -127,6 +128,7 @@ class myForm(QWidget):
         self.pb4.clicked.connect(self.solt_pb4_clicked)
         self.pb5.clicked.connect(self.solt_pb5_clicked)
         self.pb6.clicked.connect(self.solt_pb6_clicked)
+        self.pb7.clicked.connect(self.solt_pb7_clicked)
 
         # 复选框
         self.checkBox1.setText('可选择')
@@ -148,7 +150,6 @@ class myForm(QWidget):
 
         # 树对象 的 信号与槽
         self.treeWidget.itemClicked.connect(self.slot_treeWidget_itemClicked)
-        self.treeWidget.itemSelectionChanged.connect(self.slot_treeWidget_itemSelectionChanged)
 
 
 
@@ -247,6 +248,8 @@ class myForm(QWidget):
 
     def solt_pb2_clicked(self):
         self.p('\nsolt_pb2_clicked 2.当前节点(激活)的信息:')
+
+        self.check_refresh()
 
         item = self.treeWidget.currentItem()
         index = self.treeWidget.currentIndex()
@@ -384,13 +387,50 @@ class myForm(QWidget):
         self.p('      删除...（结果可能滞后)...OK!')
 
     def solt_pb6_clicked(self):
-        self.p('\nsolt_pb6_clicked 5.改:')
-        item_current = self.treeWidget.currentItem()
+        self.p('\nsolt_pb6_clicked 6.改:')
+        item = self.treeWidget.currentItem()
         index = self.treeWidget.currentIndex()
 
-        if (item_current == None or index.row()<0):
+        if (item == None or index.row()<0):
             self.p('  当前没有节点可供操作, 或没有节点被选中激活!')
             return
+
+        self.p('当前节点：'+item.text(0)+'|'+item.text(1))
+        self.p('  先删除然后再建立重建它（放入中转站）,相当于移动')
+        if item.parent()==None or index.parent().row()<0:
+            self.p('    当前节点是一级节点,使用takeTopLevelItem、addTopLevelItem命令')
+            item_take = self.treeWidget.takeTopLevelItem(index.row())
+        else:
+            self.p('    当前节点是子结点，使用 takeChild')
+            item_take = item.parent().takeChild(index.row())
+
+        # 建中转站
+        items = self.treeWidget.findItems("【中转站】", Qt.MatchExactly, 0)
+        if len(items)>0:
+            item_zzz = items[0]
+        else:
+            item_zzz = QTreeWidgetItem()
+            item_zzz.setText(0,'【中转站】')
+            self.treeWidget.addTopLevelItem(item_zzz)
+
+        item_zzz.addChild(item_take)
+
+
+    def solt_pb7_clicked(self):
+        self.p('\nsolt_pb6_clicked 7.查:')
+        item = self.treeWidget.currentItem()
+        index = self.treeWidget.currentIndex()
+
+
+        items = self.treeWidget.findItems("中转站", Qt.MatchContains,0)
+        print(items)
+
+        if len(items) > 0:
+
+            for item in items:
+                # print(self.listWidgetName.row(item))
+
+                print(item.text(0))
 
 
     def recursive_item_child(self,lead,item):
@@ -401,7 +441,7 @@ class myForm(QWidget):
             for m in range(n):
                 self.recursive_item_child(lead+'.'+str(m+1),item.child(m))
 
-    def slot_treeWidget_itemSelectionChanged(self):     #选择的节点改变时
+    def check_refresh(self):     #选择的节点改变时
         self.p('\nslot_treeWidget_itemSelectionChanged:')
 
         # 检验是否可选择[1], 并更新 checkBox1
@@ -458,10 +498,10 @@ class myForm(QWidget):
             self.checkBox8.setChecked(False)
         self.p('  选择：'+str(self.checkBox8.isChecked()))
 
-
     def slot_treeWidget_itemClicked(self,item,column_int):
         self.p('\nslot_treeWidget_itemClicked:')
         self.p('点击的节点：{}'.format(item.text(column_int)))
+        self.check_refresh()
 
     def p(self,*list):
         if len(list)>0:
