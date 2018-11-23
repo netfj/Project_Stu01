@@ -120,7 +120,7 @@ class myForm(QWidget):
         self.pb3.setText('&3.遍历')
         self.pb4.setText('&4.增')
         self.pb5.setText('&5.删')
-        self.pb6.setText('&6.改')
+        self.pb6.setText('&6.改（移）')
         self.pb7.setText('&7.查')
         self.pb1.clicked.connect(self.solt_pb1_clicked)
         self.pb2.clicked.connect(self.solt_pb2_clicked)
@@ -249,8 +249,6 @@ class myForm(QWidget):
     def solt_pb2_clicked(self):
         self.p('\nsolt_pb2_clicked 2.当前节点(激活)的信息:')
 
-        self.check_refresh()
-
         item = self.treeWidget.currentItem()
         index = self.treeWidget.currentIndex()
         if (item==None or index.row()<0):
@@ -324,6 +322,8 @@ class myForm(QWidget):
         self.p(info13)
         self.p(info14)
         self.p(info15)
+
+        self.check_refresh()
 
 
     def solt_pb3_clicked(self):
@@ -421,16 +421,17 @@ class myForm(QWidget):
         item = self.treeWidget.currentItem()
         index = self.treeWidget.currentIndex()
 
+        text, ok = QInputDialog.getText(self, '查找(仅一级节点)', '请输入要查找的节点名称：'+' '*15)
+        if (not ok): return
+        if len(text)==0: return
 
-        items = self.treeWidget.findItems("中转站", Qt.MatchContains,0)
-        print(items)
-
+        items = self.treeWidget.findItems(text, Qt.MatchContains,0)
         if len(items) > 0:
-
+            self.p('  找到的节点：')
             for item in items:
-                # print(self.listWidgetName.row(item))
-
-                print(item.text(0))
+                self.p('    '+item.text(0))
+        else:
+            self.p('  没有找到符合关键字的节点：')
 
 
     def recursive_item_child(self,lead,item):
@@ -441,8 +442,8 @@ class myForm(QWidget):
             for m in range(n):
                 self.recursive_item_child(lead+'.'+str(m+1),item.child(m))
 
-    def check_refresh(self):     #选择的节点改变时
-        self.p('\nslot_treeWidget_itemSelectionChanged:')
+    def check_refresh(self):     #节点状态
+        self.p('\ncheck_refresh: 当前节点状态')
 
         # 检验是否可选择[1], 并更新 checkBox1
         self.checkBox1.setChecked(
@@ -503,7 +504,7 @@ class myForm(QWidget):
         self.p('点击的节点：{}'.format(item.text(column_int)))
         self.check_refresh()
 
-    def p(self,*list):
+    def p(self,*list):      # 用于在输出框中输出执行信息
         if len(list)>0:
             for x in list:
                 self.textBrowser.append(str(x))
