@@ -18,12 +18,15 @@ class myForm(QWidget):
     def __init__(self):
         super().__init__()
         self.Ui()
+        self.setGeometry(0, 0, 920, 710)
+
         self.widget_setup()         #建立部件
         self.data_init()              #数据初始化
         self.single_slot_setup()    #信息与槽初始化
 
     def Ui(self):
         self = QWidget()
+
 
     def widget_setup(self):
         # 建立部件

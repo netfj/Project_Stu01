@@ -1,4 +1,9 @@
 # coding:utf-8
+'''
+这里模拟Qt设计好的文件，转换成py文件后，模拟引入的示例。
+类Ui_Form，相当于是Qt设置的原始模板；被myForm继承后，以写入自己的业务逻辑。
+'''
+
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
