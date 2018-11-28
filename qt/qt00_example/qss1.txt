@@ -1,0 +1,4 @@
+QMainWindow{background-color:rgb(0,0,0)}
+QPushButton{background-color:rgb(255,0,0)}
+QFrame{background-color:rgb(0,255,0)}
+QTextBrowser{background-color:rgb(0,0,255)}
