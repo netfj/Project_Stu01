@@ -2,7 +2,7 @@
 """
 info:   样式表
 author: NetFj@sina.com
-file:   qt01_main.py
+file:   qt59_styleSheet.py
 time:   2018/11/27.19:20
 """
 import sys
@@ -12,20 +12,20 @@ class Exampl(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.resize(500, 600)
+        self.resize(300, 350)
 
         lable = QLabel('Start: 这是标签', self)
         lable.setGeometry(1,1,200,30)
 
         pushButton = QPushButton('Start: 这是按钮', self)
-        pushButton.setGeometry(5,40,200,40)
+        pushButton.setGeometry(5,40,280,40)
 
         TextBr = QTextBrowser(self)
         TextBr.setGeometry(10, 80, 200, 100)
         TextBr.append('QTextBrowser')
 
         Frame = QFrame(self)
-        Frame.setGeometry(1,200,200,200)
+        Frame.setGeometry(1,200,200,100)
 
         # self.setStyleSheet('QMainWindow{background-color:rgb(0,0,0)}'
         #                    'QPushButton{background-color:rgb(255,0,0)}'
