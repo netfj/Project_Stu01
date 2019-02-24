@@ -1,6 +1,6 @@
 #coding:utf-8
 """
-info:   连接SQLite数据库
+info:   连接SQLite数据库（本文参考了网上示例）
 author: NetFj@sina.com
 file:   qt60_Sql_data.py
 time:   2018/11/29.0:56

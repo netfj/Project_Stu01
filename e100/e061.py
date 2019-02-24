@@ -25,6 +25,15 @@ def triangles():
 # yield 使用浅析:
 # http://www.runoob.com/w3cnote/python-yield-used-analysis.html
 
+t = triangles()
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
+print(next(t))
 
 
 # a = [1,2,3]

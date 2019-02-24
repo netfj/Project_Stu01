@@ -445,3 +445,4 @@ if __name__ == "__main__":
 
     dbt2 = Dbt()
     dbt2.database_connect('abcd.db')
+    dbt2.test()
