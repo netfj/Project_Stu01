@@ -14,7 +14,7 @@ from selenium.webdriver.common.keys import Keys
 driver = Chrome()
 driver.get("http://www.baidu.com")
 
-assert "百度一下" in driver.title , '这不是百度的'
+assert "百度一下" in driver.title , '这不是百度的!'
 
 # element = driver.find_element_by_id('kw')
 # element.clear()
