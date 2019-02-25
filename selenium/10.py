@@ -6,11 +6,11 @@ file:   10.py
 time:   2019/2/25.21:16
 """
 
+def get_random(n):
+    import random
+    return random.randint(0, n)
 
-def main():
-    pass
 
-
-if __name__ == "__main__":
-    main()
+for i in range(10):
+    print(get_random(10))
 
