@@ -9,7 +9,7 @@ Info:需求： 在你的面前有一个n阶的台阶，--------
         使得他们的和等于台阶的级数，输出有多少种组合方式。
 @author:Netfj@sina.com  @software: PyCharm @file: e101.py @time: 2018/11/3 17:19
 """
-import time
+import time 
 import itertools
 
 print('product 笛卡尔积（有放回抽样排列）')
