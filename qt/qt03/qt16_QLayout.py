@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'qt16_QLayout.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(852, 603)
+        self.gridLayout = QtWidgets.QGridLayout(Form)
+        self.gridLayout.setObjectName("gridLayout")
+
+        self.verticalLayout_3 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_3.setObjectName("verticalLayout_3")
+        self.formLayout_bottom = QtWidgets.QFormLayout()
+        self.formLayout_bottom.setObjectName("formLayout_bottom")
+        self.radioButton = QtWidgets.QRadioButton(Form)
+        self.radioButton.setObjectName("radioButton")
+        self.formLayout_bottom.setWidget(0, QtWidgets.QFormLayout.LabelRole, self.radioButton)
+        self.radioButton_2 = QtWidgets.QRadioButton(Form)
+        self.radioButton_2.setObjectName("radioButton_2")
+        self.formLayout_bottom.setWidget(1, QtWidgets.QFormLayout.LabelRole, self.radioButton_2)
+        self.radioButton_3 = QtWidgets.QRadioButton(Form)
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.formLayout_bottom.setWidget(2, QtWidgets.QFormLayout.LabelRole, self.radioButton_3)
+        self.verticalLayout_3.addLayout(self.formLayout_bottom)
+        self.horizontalLayout_top = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_top.setObjectName("horizontalLayout_top")
+        self.gridLayout_top_left = QtWidgets.QGridLayout()
+        self.gridLayout_top_left.setObjectName("gridLayout_top_left")
+        self.pushButton_2 = QtWidgets.QPushButton(Form)
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.gridLayout_top_left.addWidget(self.pushButton_2, 3, 0, 1, 1)
+        self.pushButton = QtWidgets.QPushButton(Form)
+        self.pushButton.setObjectName("pushButton")
+        self.gridLayout_top_left.addWidget(self.pushButton, 2, 0, 1, 2)
+
+        self.pb1 = QtWidgets.QPushButton(Form)
+        self.pb1.setObjectName("pb1")
+        self.gridLayout_top_left.addWidget(self.pb1, 0, 0, 1, 1)
+
+        self.pb4 = QtWidgets.QPushButton(Form)
+        self.pb4.setObjectName("pb4")
+        self.gridLayout_top_left.addWidget(self.pb4, 1, 1, 1, 1)
+        self.pb2 = QtWidgets.QPushButton(Form)
+        self.pb2.setObjectName("pb2")
+        self.gridLayout_top_left.addWidget(self.pb2, 0, 1, 1, 1)
+        self.pb3 = QtWidgets.QPushButton(Form)
+        self.pb3.setObjectName("pb3")
+        self.gridLayout_top_left.addWidget(self.pb3, 1, 0, 1, 1)
+        self.pushButton_3 = QtWidgets.QPushButton(Form)
+        self.pushButton_3.setObjectName("pushButton_3")
+        self.gridLayout_top_left.addWidget(self.pushButton_3, 4, 0, 1, 1)
+        self.pushButton_4 = QtWidgets.QPushButton(Form)
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.gridLayout_top_left.addWidget(self.pushButton_4, 3, 1, 2, 1)
+        self.pushButton_5 = QtWidgets.QPushButton(Form)
+        self.pushButton_5.setObjectName("pushButton_5")
+        self.gridLayout_top_left.addWidget(self.pushButton_5, 0, 2, 3, 1)
+        self.horizontalLayout_top.addLayout(self.gridLayout_top_left)
+        self.verticalLayout_top_right = QtWidgets.QVBoxLayout()
+        self.verticalLayout_top_right.setObjectName("verticalLayout_top_right")
+        self.pb_r1 = QtWidgets.QPushButton(Form)
+        self.pb_r1.setObjectName("pb_r1")
+        self.verticalLayout_top_right.addWidget(self.pb_r1)
+        self.pb_r2 = QtWidgets.QPushButton(Form)
+        self.pb_r2.setObjectName("pb_r2")
+        self.verticalLayout_top_right.addWidget(self.pb_r2)
+        self.pb_r3 = QtWidgets.QPushButton(Form)
+        self.pb_r3.setObjectName("pb_r3")
+        self.verticalLayout_top_right.addWidget(self.pb_r3)
+        self.horizontalLayout_top.addLayout(self.verticalLayout_top_right)
+        self.horizontalLayout_top.setStretch(0, 1)
+        self.horizontalLayout_top.setStretch(1, 3)
+        self.verticalLayout_3.addLayout(self.horizontalLayout_top)
+        self.verticalLayout_3.setStretch(0, 1)
+        self.verticalLayout_3.setStretch(1, 4)
+        self.gridLayout.addLayout(self.verticalLayout_3, 0, 0, 1, 1)
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.radioButton.setText(_translate("Form", "RadioButton"))
+        self.radioButton_2.setText(_translate("Form", "RadioButton"))
+        self.radioButton_3.setText(_translate("Form", "RadioButton"))
+        self.pushButton_2.setText(_translate("Form", "PushButton"))
+        self.pushButton.setText(_translate("Form", "PushButton"))
+        self.pb1.setText(_translate("Form", "pb1"))
+        self.pb4.setText(_translate("Form", "pb4"))
+        self.pb2.setText(_translate("Form", "pb2"))
+        self.pb3.setText(_translate("Form", "pb3"))
+        self.pushButton_3.setText(_translate("Form", "PushButton"))
+        self.pushButton_4.setText(_translate("Form", "PushButton"))
+        self.pushButton_5.setText(_translate("Form", "PushButton"))
+        self.pb_r1.setText(_translate("Form", "pb_r1"))
+        self.pb_r2.setText(_translate("Form", "pb_r2"))
+        self.pb_r3.setText(_translate("Form", "pb_r3"))
+
