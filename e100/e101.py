@@ -1,6 +1,6 @@
 #coding:utf-8
 """
-Info:需求： 在你的面前有一个n阶的台阶，--------
+Info:需求： 在你的面前有一个n阶的台阶，-
         你一步只能上1级或者2级，
         请计算出你可以采用多少种不同的方法爬完这个楼梯？
         输入一个正整数表示这个台阶的级数，
@@ -9,7 +9,7 @@ Info:需求： 在你的面前有一个n阶的台阶，--------
         使得他们的和等于台阶的级数，输出有多少种组合方式。
 @author:Netfj@sina.com  @software: PyCharm @file: e101.py @time: 2018/11/3 17:19
 """
-import time 
+import time
 import itertools
 
 print('product 笛卡尔积（有放回抽样排列）')
