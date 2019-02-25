@@ -102,3 +102,4 @@ read_news(800,882)
 read_news(800,940)
 
 pyautogui.hotkey('ctrl', 'w')  # 关闭
+ 
