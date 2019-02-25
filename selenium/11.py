@@ -1,9 +1,8 @@
 #coding:utf-8
-# @Info: 每隔 n 秒移动下鼠标
+# @Info: 一个网站的浏览
 # @Author:Netfj@sina.com @File:08.py @Time:2019/2/25 17:29
 
 import pyautogui,time,random,webbrowser
-
 
 def time_set():
     #设置随机时间
@@ -81,6 +80,7 @@ def key_down():
         pyautogui.press('down')
 
 
+print('STart:',time.asctime( time.localtime(time.time())))
 
 #打开网站
 open_site('https://www.xuexi.cn')
@@ -90,6 +90,7 @@ read_1st()
 
 #要闻
 time.sleep(2)
+pyautogui.hotkey('ctrl','home')
 pyautogui.hotkey('pagedown')
 read_news(366,786)
 read_news(366,838)
@@ -102,3 +103,5 @@ read_news(800,882)
 read_news(800,940)
 
 pyautogui.hotkey('ctrl', 'w')  # 关闭
+
+print('End  :',time.asctime( time.localtime(time.time())))
