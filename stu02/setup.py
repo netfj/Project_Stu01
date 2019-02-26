@@ -1,1 +1,1 @@
-from distutils.core import setupimport py2exesetup(console=['07.py'])
+from distutils.core import setupimport py2exesetup(console=['07_position.py'])

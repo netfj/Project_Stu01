@@ -64,3 +64,29 @@ database_connect(42)[DEBUG]Opened database successfully:test.db
 table_create(123)[DEBUG]表已经存在:test_user
 value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
 value_insert(225)[DEBUG]Insert values is successful.
+log_config(25)[DEBUG]2019-02-26 18:28:50
+模块或函数名(行号)[日志类型]日志信息
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+database_connect(42)[DEBUG]Opened database successfully:abcd.db
+database_connect(42)[DEBUG]Opened database successfully:test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+log_config(25)[DEBUG]2019-02-26 18:29:17
+模块或函数名(行号)[日志类型]日志信息
+log_config(26)[DEBUG]日志设置完成：SQLiteRunInfo.log
+database_connect(42)[DEBUG]Opened database successfully:test.db
+table_create(133)[DEBUG]create table test_user (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(136)[DEBUG]Table created done：create table test_user (ID Integer PRIMARY KEY autoincrement,name   text,age int);
+table_create(141)[DEBUG]Create table successfully !
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.
+database_connect(42)[DEBUG]Opened database successfully:abcd.db
+database_connect(42)[DEBUG]Opened database successfully:test.db
+table_create(123)[DEBUG]表已经存在:test_user
+value_insert(221)[DEBUG]insert into test_user ('name','age') values ('Tom',20);
+value_insert(225)[DEBUG]Insert values is successful.

@@ -1,4 +1,4 @@
-#coding:utf-8
+﻿#coding:utf-8
 # @Info: 每隔 n 秒移动下鼠标
 # @Author:Netfj@sina.com @File:08.py @Time:2019/2/25 17:29
 
@@ -9,7 +9,7 @@ def time_set():
     #设置随机时间
     t_ready = 2 + random.randint(0, 3)
     t_ready_click = 2 +random.randint(0, 5)
-    t_read = 5 +random.randint(0, 10)
+    t_read = 180 +random.randint(0, 120)
     return (t_ready,t_ready_click,t_read)
 
 #打开网站
@@ -37,7 +37,7 @@ def read_1st():
     time.sleep(t_ready)                 #等待
     pyautogui.moveTo(878,636)           #定位到头条
     time.sleep(t_ready_click)           #等待
-    pyautogui.click(button='left')      #左击
+    pyautogui.click(button='left')      #左击打开
     time.sleep(1)
 
     #开始阅读
@@ -64,7 +64,7 @@ def read_news(x,y):
     time.sleep(t_ready)
     pyautogui.moveTo(x, y)
     time.sleep(t_ready_click)
-    pyautogui.click(button='left')
+    pyautogui.click(button='left')      #打开
     time.sleep(1)
 
     # 开始阅读
@@ -79,7 +79,6 @@ def key_down():
     for i in range(5+ random.randint(0, 6) ):
         time.sleep(1)
         pyautogui.press('down')
-
 
 
 #打开网站
