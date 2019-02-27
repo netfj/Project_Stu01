@@ -4,6 +4,7 @@
 
 import pyautogui,time,random,webbrowser
 
+print('阅读新闻开始...')
 
 def time_set():
     #设置随机时间
@@ -101,3 +102,5 @@ read_news(800,882)
 read_news(800,940)
 
 pyautogui.hotkey('ctrl', 'w')  # 关闭
+
+print('阅读新闻...结束')

@@ -46,12 +46,13 @@ class study():
         pyautogui.press('down', presses=5)
 
     def open_tv_short(self):
+        print('播放短片开始...')
         self.open_site()
         self.open_link(620, 513)
         pyautogui.press('pagedown', presses=2)
         self.open_link(460, 500)
 
-        ts = 3
+        ts = 20+random.randint(0,30)
 
         self.open_link(435,850)
         pyautogui.press('down', presses=10)
@@ -71,26 +72,35 @@ class study():
         self.open_link(435, 970)
         pyautogui.press('down', presses=10)
         time.sleep(ts)
-        pyautogui.hotkey('alt', 'f4')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        time.sleep(3)
+        print('播放短片...结束!')
 
 
     def open_tv_xwlb(self):
-        self.open_site()
+        print('播放新闻联播开始...')
         self.open_link(620, 513)
         pyautogui.press('pagedown', presses=2)
         self.open_link(460, 500)
         self.open_link(1040, 795)
         self.open_link(405, 850)
         pyautogui.press('down', presses=5)
+        print('将要播放30分钟...')
         time.sleep(30*60+random.randint(0,100))     #播放30多分钟
         pyautogui.hotkey('ctrl', 'w')  # 关闭
-        time.sleep(1)
-        pyautogui.hotkey('alt', 'f4')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        pyautogui.hotkey('ctrl', 'w')  # 关闭
+        time.sleep(3)
+        print('播放新闻联播...结束!')
+
 
 
 def main():
     stu = study()
-    # stu.open_tv_short()
+    stu.open_tv_short()
     stu.open_tv_xwlb()
 
 
